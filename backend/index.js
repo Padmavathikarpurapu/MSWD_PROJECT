@@ -7,10 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect("mongodb+srv://admin:admin@mernwebsite.edse9sr.mongodb.net/login?retryWrites=true&w=majority&appName=MernWebSite")
     .then(() => console.log("Connected to the database"))
     .catch((err) => console.log(err));
 
